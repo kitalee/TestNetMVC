@@ -3,6 +3,14 @@ branches:
   only:
   - master
 image: Visual Studio 2019
+environment:
+  # these variables are common to all jobs
+  common_var1: value1
+  common_var2: value2
+platform:
+  - Any CPU
+matrix:
+  fast_finish: true
 configuration:
 - Debug
 - Release
