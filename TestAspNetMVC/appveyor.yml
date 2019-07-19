@@ -3,17 +3,16 @@ branches:
   only:
   - master
 image: Visual Studio 2019
-environment:
+#environment:
   # these variables are common to all jobs
-  common_var1: ca.dev2.keymedia.com
-  common_var2: us.dev1.keymedia.com
-platform:
-  - Any CPU
-matrix:
-  fast_finish: true
+#  common_var1: ca.dev2.keymedia.com
+#  common_var2: us.dev1.keymedia.com
+#platform:
+#  - Any CPU
+#matrix:
+#  fast_finish: true
 configuration:
 - Debug
-- Release
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
