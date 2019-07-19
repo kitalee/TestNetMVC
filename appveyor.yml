@@ -1,0 +1,22 @@
+version: 1.0.{build}
+branches:
+  only:
+  - master
+image: Visual Studio 2019
+configuration: Release
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+cache: packages -> **\packages.config
+nuget:
+  account_feed: true
+before_build:
+- cmd: nuget restore
+build:
+  publish_wap: true
+  verbosity: minimal
