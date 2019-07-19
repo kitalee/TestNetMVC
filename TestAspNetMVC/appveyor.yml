@@ -3,7 +3,9 @@ branches:
   only:
   - master
 image: Visual Studio 2019
-configuration: Debug, Release
+configuration:
+-Debug
+-Release
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
