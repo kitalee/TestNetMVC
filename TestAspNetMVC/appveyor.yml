@@ -5,8 +5,8 @@ branches:
 image: Visual Studio 2019
 environment:
   # these variables are common to all jobs
-  common_var1: value1
-  common_var2: value2
+  common_var1: ca.dev2.keymedia.com
+  common_var2: us.dev1.keymedia.com
 platform:
   - Any CPU
 matrix:
