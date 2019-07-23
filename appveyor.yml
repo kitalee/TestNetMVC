@@ -27,5 +27,5 @@ build:
   publish_wap: true
   verbosity: minimal
   #parallel: true
-environment:
-  Test1: Test1_from_yml
+#environment:
+  #Test1: Test1_from_yml
