@@ -28,5 +28,4 @@ build:
   verbosity: minimal
   #parallel: true
 environment:
-  Test1: Test1 from yml
-  variable2: value
+  Test1: Test1_from_yml
