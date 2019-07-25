@@ -27,4 +27,4 @@ after_build:
 - cmd: msbuild %APPVEYOR_PROJECT_NAME%.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" -p:Configuration=Debug /t:Package /p:PackageLocation=./%APPVEYOR_PROJECT_NAME%_Staging.zip
 artifacts:
 - path: '*.zip'
-- name: artifacts
+  name: artifacts
