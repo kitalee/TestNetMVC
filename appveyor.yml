@@ -24,7 +24,7 @@ build:
 #environment:
   #Test1: Test1_from_yml
 after_build:
-- cmd: msbuild %APPVEYOR_PROJECT_NAME%.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" -p:Configuration=Debug /t:Package /p:PackageLocation=./%APPVEYOR_PROJECT_NAME%_Staging.zip
+- cmd: msbuild %APPVEYOR_PROJECT_NAME%.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" -p:Configuration=Debug /t:Package /p:PackageLocation=./%APPVEYOR_PROJECT_NAME%_Staging.zip /p:DeployOnBuild=True /p:PublishProfile=appveyor
 artifacts:
 - path: '*.zip'
   name: artifacts
